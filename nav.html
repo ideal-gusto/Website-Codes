@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+	
+<body>
+
+<nav class="navbar">
+	<div class="content">
+	<div class="logo"><font color="white">IDEAL GUSTO</font></div>
+		
+	<ul class="menu-list">
+		<div class="icon cancel-btn">
+			<i class="fa fa-times"></i>
+		</div>	
+		
+	<li><a href="#">HOME</a></li>	
+	<li><a href="#">GALLERY</a></li>
+	<li><a href="#">CONTACT US</a></li>
+	<li><a href="#">LOCATION</a></li>
+	
+	</ul>	
+		
+		<div class="icon menu-btn">
+			<i class="fa fa-bars"></i>
+		</div>
+		
+	</div>
+	</nav>
+
+<div class="banner"></div>
+	
+<script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+	const menu = document.querySelector(".menu-list")
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabledScroll");
+    }
+    cancelBtn.onclick = ()=>{
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      body.classList.remove("disabledScroll");
+    }
+	
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+</script>
+		
+	H<br>
+E<br>
+L<br>
+L<br>
+O
+	
+</body>
+</html>
